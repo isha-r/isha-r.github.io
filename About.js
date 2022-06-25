@@ -1,6 +1,6 @@
 import React, { Component } from 'react';
 import "./About.css";
-import ir from "../assets/ir.jpg";
+import ir from "./ir.jpg";
 
 export default class About extends Component {
   render() {
