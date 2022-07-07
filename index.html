@@ -6,10 +6,49 @@
         <style>
         body { background-color: #ADD8E6; }
         p { color: #000; }
+            /* Split the screen in half */
+        .split {
+          height: 100%;
+          width: 50%;
+          position: fixed;
+          z-index: 1;
+          top: 0;
+          overflow-x: hidden;
+          padding-top: 20px;
+        }
+
+        /* Control the left side */
+        .left {
+          left: 0;
+          background-color: #111;
+        }
+
+        /* Control the right side */
+        .right {
+          right: 0;
+          background-color: red;
+        }
+
+        /* If you want the content centered horizontally and vertically */
+        .centered {
+          position: absolute;
+          top: 50%;
+          left: 50%;
+          transform: translate(-50%, -50%);
+          text-align: center;
+        }
+
+        /* Style the image inside the centered container, if needed */
+        .centered img {
+          width: 150px;
+          border-radius: 50%;
+        }
         </style>
     </head>
     <body>
-        <h1>Hi There! My name is Isha.</h1>
+        <div class="split left">
+  <div class="centered">
+   <h1>Hi There! My name is Isha.</h1>
         <h2>Here is my profile photo</h2>
         <img src="profile_pic.jpg" alt="Isha Rustagi">
         <h2>Click below for my resume!</h2>
@@ -17,7 +56,18 @@
              Directed undergraduate student pursuing a Bachelor of Science focused in Computer Science from University of Wisconsin-Madison. 
         </p>
         <a href="https://drive.google.com/file/d/1M5dz9s-ZrGRB1eoUa5xtZOKFroJa1RXN/view?usp=sharing" target="_blank">This is my resume!
-           <img src="resumePhotoGit.jpg" alt="this is my resume's photo!" >
+           <img src="resumePhotoGit.jpg" alt="this is my resume's photo!" width="40px" height="80px"  >
         </a>
+  </div>
+</div>
+
+<div class="split right">
+  <div class="centered">
+    
+    <h2>John Doe</h2>
+    <p>Some text here too.</p>
+  </div>
+</div>
+     
     </body>
 </html>
